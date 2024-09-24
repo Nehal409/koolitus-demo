@@ -1,0 +1,142 @@
+{
+  "title": {
+    "en": "Questionnaire",
+    "et": "Küsimustik",
+    "ru": "Вопросник"
+  },
+  "description": {
+    "en": "Please answer the following questions to the best of your ability",
+    "et": "Palun vastake järgmistele küsimustele vastavalt oma võimetele",
+    "ru": "Пожалуйста, ответьте на следующие вопросы как можно лучше"
+  },
+  "questions": [
+    {
+      "id": "education",
+      "type": "single-choice",
+      "en": {
+        "question": "What is your highest level of education?",
+        "options": [
+          "High school or equivalent",
+          "Vocational training",
+          "Bachelor's degree",
+          "Master's degree or higher"
+        ]
+      },
+      "et": {
+        "question": "Milline on teie kõrgeim haridustase?",
+        "options": [
+          "Keskharidus või võrdväärne",
+          "Kutseharidus",
+          "Bakalaureusekraad",
+          "Magistrikraad või kõrgem"
+        ]
+      },
+      "ru": {
+        "question": "Какой у вас самый высокий уровень образования?",
+        "options": [
+          "Среднее образование или эквивалент",
+          "Профессиональное образование",
+          "Степень бакалавра",
+          "Степень магистра или выше"
+        ]
+      }
+    },
+    {
+      "id": "experience",
+      "type": "single-choice",
+      "en": {
+        "question": "How many years of work experience do you have?",
+        "options": [
+          "0-2 years",
+          "3-5 years",
+          "6-10 years",
+          "More than 10 years"
+        ]
+      },
+      "et": {
+        "question": "Kui palju teil on töökogemust?",
+        "options": [
+          "0-2 aastat",
+          "3-5 aastat",
+          "6-10 aastat",
+          "Rohkem kui 10 aastat"
+        ]
+      },
+      "ru": {
+        "question": "Сколько у вас лет рабочего стажа?",
+        "options": ["0-2 года", "3-5 лет", "6-10 лет", "Более 10 лет"]
+      }
+    },
+    {
+      "id": "current_field",
+      "type": "single-choice",
+      "en": {
+        "question": "Which field best describes your current or most recent job?",
+        "options": [
+          "Technology and IT",
+          "Business and Finance",
+          "Healthcare",
+          "Education",
+          "Creative and Design",
+          "Other"
+        ]
+      },
+      "et": {
+        "question": "Milline valdkond kirjeldab kõige paremini teie praegust või viimast töökohta?",
+        "options": [
+          "Tehnoloogia ja IT",
+          "Äri ja rahandus",
+          "Tervishoid",
+          "Haridus",
+          "Loovala ja disain",
+          "Muu"
+        ]
+      },
+      "ru": {
+        "question": "Какая сфера лучше всего описывает вашу текущую или последнюю работу?",
+        "options": [
+          "Технологии и ИТ",
+          "Бизнес и финансы",
+          "Здравоохранение",
+          "Образование",
+          "Творчество и дизайн",
+          "Другое"
+        ]
+      }
+    },
+    {
+      "id": "career_goal",
+      "type": "single-choice",
+      "en": {
+        "question": "What is your primary career goal?",
+        "options": [
+          "Change to a new field",
+          "Advance in current field",
+          "Improve work-life balance",
+          "Increase income",
+          "Start own business"
+        ]
+      },
+      "et": {
+        "question": "Mis on teie peamine karjäärieesmärk?",
+        "options": [
+          "Vahetan eriala",
+          "Arenen praeguses valdkonnas",
+          "Parandan töö ja eraelu tasakaalu",
+          "Suurendan sissetulekut",
+          "Alustan oma ettevõttega"
+        ]
+      },
+      "ru": {
+        "question": "Какова ваша основная карьерная цель?",
+        "options": [
+          "Сменить сферу деятельности",
+          "Продвинуться в текущей сфере",
+          "Улучшить баланс между работой и личной жизнью",
+          "Увеличить доход",
+          "Начать свой бизнес"
+        ]
+      }
+    }
+  ]
+}

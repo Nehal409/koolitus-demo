@@ -1,7 +1,7 @@
-import Navbar from "../components/Navbar";
-import Questionnaire from "../components/Questionnaire";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
+import Navbar from "../components/Navbar";
+import Questionnaire from "../components/Questionnaire";
 
 const MainLayout = ({ selectedLanguage, onLanguageChange }: any) => {
   return (

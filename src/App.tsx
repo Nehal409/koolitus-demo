@@ -18,8 +18,7 @@ const App: React.FC = () => {
   useEffect(() => {
     ReactGA.initialize(GA_TRACKING_ID, {
       gaOptions: {
-        cookieDomain: "auto",
-        cookie_flags: "SameSite=None; Secure",
+        cookieFlags: "SameSite=None; Secure",
       },
     });
 

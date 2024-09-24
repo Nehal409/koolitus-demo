@@ -1,16 +1,38 @@
+import { useEffect, useState } from "react";
+import ReactGA from "react-ga4";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { useEffect, useState } from "react";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+const GA_TRACKING_ID = "G-FP4W8W5R7M";
+
 const App = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+
+  // Initialize Google Analytics 4
+  useEffect(() => {
+    ReactGA.initialize(GA_TRACKING_ID);
+
+    // Track the initial page view
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
+  // Track page views when the route changes
+  useEffect(() => {
+    const unListen = window.addEventListener("popstate", () => {
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    });
+
+    return () => {
+      window.removeEventListener("popstate", unListen as any);
+    };
+  }, []);
 
   // Load the selected language from localStorage on component mount
   useEffect(() => {
@@ -23,6 +45,13 @@ const App = () => {
   const handleLanguageChange = (lang: string) => {
     setSelectedLanguage(lang);
     localStorage.setItem("selectedLanguage", lang);
+
+    // Track language change event
+    ReactGA.event({
+      category: "Language",
+      action: "Change Language",
+      label: `Language changed to ${lang}`,
+    });
   };
 
   const router = createBrowserRouter(

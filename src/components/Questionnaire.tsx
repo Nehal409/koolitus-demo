@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { questions, title, description } from "../questionnaire.json"; // Adjust import path if necessary
 import { toast } from "react-toastify";
+import ReactGA from "react-ga4";
 
 const Questionnaire = ({ selectedLanguage }: any) => {
   const [responses, setResponses] = useState({});
@@ -18,6 +19,14 @@ const Questionnaire = ({ selectedLanguage }: any) => {
     // Reset the form contents
     setResponses({}); // Clear the responses state
     event.target.reset(); // Reset the form
+
+    // Track questionnaire submission event
+    ReactGA.event({
+      category: "Questionnaire",
+      action: "Submit Questionnaire",
+      label: "Questionnaire Submitted",
+    });
+
     toast.success("Questionnaire submitted successfully");
   };
 

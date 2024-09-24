@@ -22,7 +22,7 @@ const Questionnaire = ({ selectedLanguage }: any) => {
   };
 
   return (
-    <section className="bg-indigo-50 py-20">
+    <section className="bg-indigo-50 py-20 min-h-screen">
       <div className="container m-auto max-w-2xl py-14">
         <div className="bg-white px-6 py-8 shadow-md rounded-md border">
           <form onSubmit={handleSubmit}>

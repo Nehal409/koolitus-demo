@@ -16,7 +16,11 @@ const App: React.FC = () => {
 
   // Initialize Google Analytics 4
   useEffect(() => {
-    ReactGA.initialize(GA_TRACKING_ID);
+    ReactGA.initialize(GA_TRACKING_ID, {
+      gaOptions: {
+        cookieDomain: "auto",
+      },
+    });
 
     // Track the initial page view
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });

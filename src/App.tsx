@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactGA from "react-ga4";
 import {
   createBrowserRouter,
@@ -10,9 +10,8 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
-const GA_TRACKING_ID = "G-FP4W8W5R7M";
-
-const App = () => {
+const App: React.FC = () => {
+  const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID;
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 
   // Initialize Google Analytics 4

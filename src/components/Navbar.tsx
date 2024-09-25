@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaCaretDown } from "react-icons/fa";
 
 const Navbar = ({ selectedLanguage, onLanguageChange }: any) => {
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
@@ -24,60 +25,59 @@ const Navbar = ({ selectedLanguage, onLanguageChange }: any) => {
                 >
                   Home
                 </NavLink>
-                <NavLink
-                  to="/"
-                  className={
-                    "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                  }
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                >
-                  Language
-                </NavLink>
-                {dropdownOpen && (
-                  <div className="absolute right-28 mt-12 bg-white rounded-md shadow-lg">
-                    <ul className="py-2">
-                      <li>
-                        <button
-                          onClick={() => {
-                            onLanguageChange("en");
-                            setDropdownOpen(false);
-                          }}
-                          className={`block px-4 py-2 text-sm ${
-                            selectedLanguage === "en" ? "font-bold" : ""
-                          }`}
-                        >
-                          English (en)
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          onClick={() => {
-                            onLanguageChange("et");
-                            setDropdownOpen(false);
-                          }}
-                          className={`block px-4 py-2 text-sm ${
-                            selectedLanguage === "et" ? "font-bold" : ""
-                          }`}
-                        >
-                          Estonian (et)
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          onClick={() => {
-                            onLanguageChange("ru");
-                            setDropdownOpen(false);
-                          }}
-                          className={`block px-4 py-2 text-sm ${
-                            selectedLanguage === "ru" ? "font-bold" : ""
-                          }`}
-                        >
-                          Russian (ru)
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                )}
+                <div className="relative">
+                  <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className="flex items-center text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  >
+                    Language <FaCaretDown className="ml-1" />
+                  </button>
+                  {dropdownOpen && (
+                    <div className="absolute right-0 mt-2 bg-white rounded-md shadow-lg">
+                      <ul className="py-2">
+                        <li>
+                          <button
+                            onClick={() => {
+                              onLanguageChange("en");
+                              setDropdownOpen(false);
+                            }}
+                            className={`block px-4 py-2 text-sm ${
+                              selectedLanguage === "en" ? "font-bold" : ""
+                            }`}
+                          >
+                            English (en)
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            onClick={() => {
+                              onLanguageChange("et");
+                              setDropdownOpen(false);
+                            }}
+                            className={`block px-4 py-2 text-sm ${
+                              selectedLanguage === "et" ? "font-bold" : ""
+                            }`}
+                          >
+                            Estonian (et)
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            onClick={() => {
+                              onLanguageChange("ru");
+                              setDropdownOpen(false);
+                            }}
+                            className={`block px-4 py-2 text-sm ${
+                              selectedLanguage === "ru" ? "font-bold" : ""
+                            }`}
+                          >
+                            Russian (ru)
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

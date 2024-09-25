@@ -19,6 +19,7 @@ const App: React.FC = () => {
     ReactGA.initialize(GA_TRACKING_ID, {
       gaOptions: {
         cookieFlags: "SameSite=None; Secure",
+        cookieExpires: 8640000
       },
     });
 

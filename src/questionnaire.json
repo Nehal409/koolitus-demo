@@ -137,6 +137,100 @@
           "Начать свой бизнес"
         ]
       }
+    },
+    {
+      "id": "comparison pairs",
+      "type": "comparison",
+      "en": {
+        "question": "For each pair, choose the option that you prefer or identifies with you more:",
+        "pairs": [
+          {
+            "id": "problem solving vs creativity",
+            "a": "Solving complex problems",
+            "b": "Expressing creativity"
+          },
+          {
+            "id": "stability vs change",
+            "a": "Stable and predictable work environment",
+            "b": "Dynamic and changing work environment"
+          },
+          {
+            "id": "teamwork vs independent",
+            "a": "Working closely with a team",
+            "b": "Working independently"
+          },
+          {
+            "id": "analytical vs practical",
+            "a": "Analyzing data and information",
+            "b": "Applying practical skills"
+          },
+          {
+            "id": "leading vs supporting",
+            "a": "Leading and making decisions",
+            "b": "Supporting and implementing decisions"
+          }
+        ]
+      },
+      "et": {
+        "question": "Iga paari puhul valige variant, mida eelistate või mis teid rohkem iseloomustab:",
+        "pairs": [
+          {
+            "id": "problem solving vs creativity",
+            "a": "Keeruliste probleemide lahendamine",
+            "b": "Loovuse väljendamine"
+          },
+          {
+            "id": "stability vs change",
+            "a": "Stabiilne ja etteaimatav töökeskkond",
+            "b": "Dünaamiline ja muutuv töökeskkond"
+          },
+          {
+            "id": "teamwork vs independent",
+            "a": "Tihedalt meeskonnas töötamine",
+            "b": "Iseseisvalt töötamine"
+          },
+          {
+            "id": "analytical vs practical",
+            "a": "Andmete ja info analüüsimine",
+            "b": "Praktiliste oskuste rakendamine"
+          },
+          {
+            "id": "leading vs supporting",
+            "a": "Juhtimine ja otsuste tegemine",
+            "b": "Otsuste toetamine ja elluviimine"
+          }
+        ]
+      },
+      "ru": {
+        "question": "Для каждой пары выберите вариант, который вы предпочитаете или который больше вас характеризует:",
+        "pairs": [
+          {
+            "id": "problem solving vs creativity",
+            "a": "Решение сложных проблем",
+            "b": "Выражение креативности"
+          },
+          {
+            "id": "stability vs change",
+            "a": "Стабильная и предсказуемая рабочая среда",
+            "b": "Динамичная и меняющаяся рабочая среда"
+          },
+          {
+            "id": "teamwork vs independent",
+            "a": "Тесная работа в команде",
+            "b": "Самостоятельная работа"
+          },
+          {
+            "id": "analytical vs practical",
+            "a": "Анализ данных и информации",
+            "b": "Применение практических навыков"
+          },
+          {
+            "id": "leading vs supporting",
+            "a": "Руководство и принятие решений",
+            "b": "Поддержка и реализация решений"
+          }
+        ]
+      }
     }
   ]
 }

@@ -7,7 +7,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
-import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const App: React.FC = () => {
@@ -19,23 +18,12 @@ const App: React.FC = () => {
     ReactGA.initialize(GA_TRACKING_ID, {
       gaOptions: {
         cookieFlags: "SameSite=None; Secure",
-        cookieExpires: 8640000
+        cookieExpires: 8640000,
       },
     });
 
     // Track the initial page view
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  }, []);
-
-  // Track page views when the route changes
-  useEffect(() => {
-    const unListen = window.addEventListener("popstate", () => {
-      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-    });
-
-    return () => {
-      window.removeEventListener("popstate", unListen as any);
-    };
   }, []);
 
   // Load the selected language from localStorage on component mount
@@ -69,9 +57,7 @@ const App: React.FC = () => {
               onLanguageChange={handleLanguageChange}
             />
           }
-        >
-          <Route index element={<HomePage />} />
-        </Route>
+        ></Route>
 
         {/* Fallback for 404 Not Found */}
         <Route path="*" element={<NotFoundPage />} />
